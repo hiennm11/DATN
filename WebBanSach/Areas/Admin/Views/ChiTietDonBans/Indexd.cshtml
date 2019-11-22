@@ -1,0 +1,75 @@
+﻿@using WebBanSach.Models
+@model IEnumerable<WebBanSach.Models.ChiTietDonBan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/Admin/DonHangBans">Hóa đơn bán hàng</a>
+    </li>
+    <li class="breadcrumb-item active">Chi tiết hóa đơn đặt hàng</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Chi Tiết Hóa Đơn Đặt Hàng
+    </div>
+    </br>
+
+
+
+    <table class="table table-bordered" id="" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Mã đơn hàng
+                </th>
+                <th>
+                    Tên khách hàng
+                </th>
+                <th>
+                    Tên sách
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th>
+                    Đơn giá
+                </th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonHangBan.MaDonHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonHangBan.HoTenKH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sach.TenSach)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sach.SoLuong)                    
+                    </td>
+                    <td>
+                        @String.Format("{0:0,0}", item.DonGia)đ
+                    </td>
+                </tr>
+
+            }
+            
+    </table>
+</div>
+
+
+

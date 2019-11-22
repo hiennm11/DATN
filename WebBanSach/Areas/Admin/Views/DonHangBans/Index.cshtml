@@ -1,0 +1,146 @@
+﻿@model IEnumerable<WebBanSach.Models.DonHangBan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/Admin">Tổng quan</a>
+    </li>
+    <li class="breadcrumb-item active">Hóa đơn đặt hàng</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Hóa Đơn Đặt Hàng
+    </div>
+    </br>
+    <table class="table table-bordered" id="" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Tên khách hàng
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Số điện thoại
+                </th>
+                <th>
+                    Ngày đặt hàng
+                </th>
+                <th>
+                    Tổng tiền
+                </th>
+                <th>
+                    Tình trạng
+                </th>
+                <th></th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoTenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SdtKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayBan)
+                </td>
+                <td>
+          
+                    @String.Format("{0:0,0}", item.TongTien)đ
+                </td>
+           
+      
+
+
+                <td>
+
+                    @if (item.TrangThai == 1)
+                    {
+                        string trangthai = "Đang giao";
+                        @Html.DisplayFor(modelItem => trangthai)
+                    }
+                    @if (item.TrangThai == 0)
+                    {
+                        string trangthai = "Chưa duyệt";
+                        @Html.DisplayFor(modelItem => trangthai)
+                    }
+                    @if (item.TrangThai == 2)
+                    {
+                        string trangthai = "Đã giao";
+                        @Html.DisplayFor(modelItem => trangthai)
+                    }
+                    @if (item.TrangThai == 3)
+                     {
+                         string trangthai = "Đã hủy";
+                         @Html.DisplayFor(modelItem => trangthai)
+                     }
+
+                </td>
+
+                    <td>@if (item.TrangThai == 0)
+                        {
+                            <a href="~/Admin/DonHangBans/GetDuyetTrangThaiDonHang/@item.MaDonHang"><input type="button" name="" value="Duyệt" class="btn btn-info"></a>
+                            <a href="~/Admin/DonHangBans/GetGiaoHangThatBai/@item.MaDonHang"><input type="button" name="" value="Hủy"class="btn btn-info"></a>
+                        }
+                        @if (item.TrangThai == 1)
+                        {
+                            <a href="~/Admin/DonHangBans/GetDuyetTrangThaiDonHang/@item.MaDonHang"><input type="button" name="" value="Đã giao"></a>
+                           
+                        } 
+                        @if(item.TrangThai == 2)
+                        {
+                            string trangthai = "Thành công";
+                            @Html.DisplayFor(modelItem => trangthai)
+                        } 
+                        @if(item.TrangThai == 3)
+                        {
+                            string trangthai = "Thất bại";
+                            @Html.DisplayFor(modelItem => trangthai)
+                        } 
+                    </td>
+                    <td>
+                        @if (item.TrangThai == 2)
+                        {
+                            <a href="/Admin/ChiTietDonBans/Indexd/@item.MaDonHang"><i class="fas fa-fw fa-info-circle"></i></a>
+                        }
+                        else
+                        {
+                            <a href="/Admin/ChiTietDonBans/Index/@item.MaDonHang"><i class="fas fa-fw fa-info-circle"></i></a>
+                        }
+                        <a href="/Admin/DonHangBans/Delete/@item.MaDonHang"><i class="fas fa-fw fa-trash-alt" style="color: red"></i></a>
+                        @if (item.TrangThai == 1)
+                        {
+                            <a class="btn btn-info" @Html.ActionLink("In Hóa Đơn", "ReportHD", "Report", new { ReportType = "Word", @id = item.MaDonHang }, null)<a></a>
+                    }
+                        </td>
+                       
+            </tr>
+        }
+    </table>
+</div>
+
+
+

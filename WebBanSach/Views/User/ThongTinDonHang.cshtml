@@ -1,0 +1,111 @@
+﻿@using WebBanSach.Models
+@model IEnumerable<WebBanSach.Models.DonHangBan>
+
+@{
+    UserLogin User = (UserLogin)Session["TaiKhoan"];
+    ViewBag.Title = "Đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="breadcrumb-page" class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li class="active"><a href="@Url.Action("ThongTin",new{@id = User.Username})">@User.HoTen</a></li>
+                <li class="active">Thông tin đơn hàng</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="page-title display-flex-center content-space-between table-xs">
+    <h1 class="font-size-24 font-weight-bold color-dark full-xs">Thông tin đơn hàng</h1>
+    @*<span class="secondary_color_text full-xs">Tìm thấy:  <b>37</b> sách</span>*@
+</div>
+
+<table class="table thongtinDH">
+    <tr>
+        <th>
+            Mã đơn hàng
+        </th>
+        <th>
+            Người nhận
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Số điện thoại
+        </th>
+        <th>
+            Ngày mua hàng
+        </th>
+        <th>
+            Tổng tiền
+        </th>
+        <th>Trạng thái</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDonHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChiKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHang.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SdtKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayBan)
+        </td>
+        <td>
+            @String.Format("{0:0,0}", item.TongTien)đ
+        </td>
+        <td>
+
+            @if (item.TrangThai == 1)
+            {
+                string trangthai = "Đang giao";
+                @Html.DisplayFor(modelItem => trangthai)
+            }
+            @if (item.TrangThai == 0)
+            {
+                string trangthai = "Chưa duyệt";
+                @Html.DisplayFor(modelItem => trangthai)
+            }
+            @if (item.TrangThai == 2)
+            {
+                string trangthai = "Đã giao";
+                @Html.DisplayFor(modelItem => trangthai)
+            }
+            @if (item.TrangThai == 3)
+            {
+                string trangthai = "Đã hủy";
+                @Html.DisplayFor(modelItem => trangthai)
+            }
+
+        </td>
+    </tr>
+
+    }
+
+</table>
+
+<a href="javascript:history.go(-1)" class="btn font_secondary" style="width: 180px; float: left; margin-right: 10px;    background-color: #1d7eb6; color: #fff;">Quay lại</a><br />

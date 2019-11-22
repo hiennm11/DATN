@@ -1,0 +1,40 @@
+﻿@model WebBanSach.Models.TacGia
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TacGia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTacGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+    </dl>
+</br>
+    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Sửa", "Edit", new { id = Model.MaTacGia }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Quay lại", "Index", "TacGias", null, new { @class = "btn btn-danger" })
+        </div>
+    </div>
+
+
+

@@ -1,0 +1,90 @@
+﻿@using WebBanSach.Models
+@model IEnumerable<WebBanSach.Models.ChiTietDonBan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/Admin/DonHangBans">Hóa đơn bán hàng</a>
+    </li>
+    <li class="breadcrumb-item active">Chi tiết hóa đơn đặt hàng</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Chi Tiết Hóa Đơn Đặt Hàng
+    </div>
+    </br>
+    
+       <a href="@Url.Action("ThemSach",new{@donhang = ViewBag.MaHD})" class="btn btn-success">Thêm sách vào đơn hàng </a>
+    
+    <table class="table table-bordered" id="" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Mã đơn hàng
+                </th>
+                <th>
+                    Tên khách hàng
+                </th>
+                <th>
+                    Tên sách
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th>
+                    Đơn giá
+                </th>
+
+            </tr>
+        </thead>
+        @using (Html.BeginForm("Edit","ChiTietDonBans"))
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonHangBan.MaDonHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonHangBan.HoTenKH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sach.TenSach)
+                    </td>
+                    <td>
+                        <input name="txtSoLuong" type="number" min="1" class="txtSoLuong form-control text-center" value="@item.SoLuong">
+                    </td>
+                    <td>
+                        @String.Format("{0:0,0}", item.DonGia)đ
+                    </td>
+                    <td>
+                        <a href="@Url.Action("XoaGioHang",new {@donhang = item.MaDonHang,@maSP = item.MaSach})"><i class="fas fa-fw fa-trash-alt" style="color: red"></i></a>
+                    </td>
+                </tr>
+
+            }
+            <tr>
+                <td>
+                    <a href="@Url.Action("Index","DonHangBans")" class="btn font_secondary" style="width: 180px; float: left; margin-right: 10px;    background-color: #1d7eb6; color: #fff;">Quay lại</a><br />
+                </td>
+                <td>
+                    <input type="submit" id="subb" rel="nofollow" class="btn font_secondary" style="width: 180px; float: left; margin-right: 10px;    background-color: #1d7eb6; color: #fff;" value="Cập nhật">
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>
+
+
+

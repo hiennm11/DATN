@@ -1,0 +1,167 @@
+﻿
+@model IEnumerable<WebBanSach.Models.Sach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/Admin">Tổng quan</a>
+    </li>
+    <li class="breadcrumb-item active">Quản lí sách</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Quản Lí Sách
+    </div>
+
+    <div class="card-body">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="~/Admin/Saches/Create" class="btn btn-info" role="button">Thêm sách</a>
+
+                <a class="btn btn-info" @Html.ActionLink("In báo cáo", "ReportHangTon", "Report", new { ReportType = "Word" }, null)
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TenSach)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Loai.TenLoai)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NhaXuatBan.TenNXB)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NhaCungCap.TenNCC)
+                        </th>
+
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Hinh)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GiaBan)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SoLuong)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TrangThai)
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TenSach)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Loai.TenLoai)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NhaXuatBan.TenNXB)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NhaCungCap.TenNCC)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Hinh)
+                        </th>
+                        <th>
+
+                            @Html.DisplayNameFor(model => model.GiaBan)
+
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SoLuong)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TrangThai)
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                </tfoot>
+                @foreach (var item in Model)
+                {
+                    string img = item.Hinh;
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenSach)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Loai.TenLoai)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNXB)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhaCungCap.TenNCC)
+                        </td>
+
+                        <td>
+
+                            @if (img == null)
+                            {
+                                <img height="100" width="90" style="border: solid 0.2px" />
+                            }
+                            else
+                            {
+                                <img src=@item.Hinh height="100" width="90" style="border: solid 0.2px" />
+                            }
+
+                        </td>
+
+                        <td>
+                            @String.Format("{0:0,0}", item.GiaBan)đ
+                        </td>
+
+                        <td>
+                            @if (item.SoLuong > 0)
+                            {
+                                @Html.DisplayFor(modelItem => item.SoLuong)
+                            }
+                            else
+                            {
+                                string soluong = "Hết hàng";
+                                @Html.DisplayFor(modelItem => soluong)
+                            }
+                        </td>
+                        <td>
+                            @if (item.TrangThai == true)
+                            {
+                                string trangthai = "Đang bán";
+                                @Html.DisplayFor(modelItem => trangthai)
+                            }
+                            else
+                            {
+                                string trangthai = "Dừng bán";
+                                @Html.DisplayFor(modelItem => trangthai)
+                            }
+                        </td>
+                        <td>
+                            <a href="/Admin/Saches/Edit/@item.MaSach"><i class="fas fa-fw fa-pencil-alt"></i></a>
+                            <a href="/Admin/Saches/Delete/@item.MaSach"><i class="fas fa-fw fa-trash-alt" style="color: red"></i></a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Cập nhật ngày @DateTime.Now</div>
+</div>
+
+
+
+
+

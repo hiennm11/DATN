@@ -1,0 +1,40 @@
+﻿@model IEnumerable < WebBanSach.Models.BinhLuan >
+
+@foreach (var item in Model)
+{
+    <div class="comment-list__item">
+        <div class="item__avatar pull-left">
+            <img src="https://graph.facebook.com/575539609446755/picture?width=500&amp;height=500" class="img-circle" alt="@item.MaKhachHang">
+            <span class="item__name-user">@Html.DisplayFor(modelItem => item.KhachHang.HoTen)</span>
+            <span class="item__time">@item.NgayBinhLuan</span>
+        </div>
+        <div class="item__content display-table">
+            <div class="item__rate display-flex-center">
+                @if (item.SoSao > 0)
+                {
+                    <span class="rating-box pointer">
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <span style="width:100%">
+                            @for (int i = 0; i < item.SoSao; i++)
+                            {
+                                <i class="star-item fa fa-star"></i>
+                            }
+
+
+                        </span>
+                    </span>
+                }
+                
+            </div>
+            <div class="item__bought display-flex-center">
+            </div>
+            <div class="item__content-detail">
+                @item.NoiDung
+            </div>
+        </div>
+    </div>
+}

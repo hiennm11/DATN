@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebBanSachDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BinhLuan">
+    <Key>
+      <PropertyRef Name="MaBinhLuan" />
+    </Key>
+    <Property Name="MaBinhLuan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoSao" Type="Int32" Nullable="false" />
+    <Property Name="NgayBinhLuan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang" FromRole="BinhLuans" ToRole="KhachHangs" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_dbo_BinhLuans_dbo_Saches_MaSach" FromRole="BinhLuans" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="ChiTietDonBan">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="DonGia" Type="Double" Nullable="false" />
+    <NavigationProperty Name="DonHangBan" Relationship="Self.FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang" FromRole="ChiTietDonBans" ToRole="DonHangBans" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_dbo_ChiTietDonBans_dbo_Saches_MaSach" FromRole="ChiTietDonBans" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="ChiTietDonNhap">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="DonGia" Type="Double" Nullable="false" />
+    <NavigationProperty Name="DonHangNhap" Relationship="Self.FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang" FromRole="ChiTietDonNhaps" ToRole="DonHangNhaps" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach" FromRole="ChiTietDonNhaps" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanViens" Relationship="Self.FK_dbo_NhanViens_dbo_ChucVus_MaChucVu" FromRole="ChucVus" ToRole="NhanViens" />
+  </EntityType>
+  <EntityType Name="DonHangBan">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="HoTenKH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChiKH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailKH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SdtKH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayBan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TongTien" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ChiTietDonBans" Relationship="Self.FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang" FromRole="DonHangBans" ToRole="ChiTietDonBans" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang" FromRole="DonHangBans" ToRole="KhachHangs" />
+  </EntityType>
+  <EntityType Name="DonHangNhap">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TongTien" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ChiTietDonNhaps" Relationship="Self.FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang" FromRole="DonHangNhaps" ToRole="ChiTietDonNhaps" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BinhLuans" Relationship="Self.FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang" FromRole="KhachHangs" ToRole="BinhLuans" />
+    <NavigationProperty Name="DonHangBans" Relationship="Self.FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang" FromRole="KhachHangs" ToRole="DonHangBans" />
+  </EntityType>
+  <EntityType Name="LoaiSach">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_dbo_Saches_dbo_LoaiSaches_MaLoai" FromRole="LoaiSaches" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_dbo_Saches_dbo_NhaCungCaps_MaNCC" FromRole="NhaCungCaps" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaChucVu" Type="Int32" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ChucVu" Relationship="Self.FK_dbo_NhanViens_dbo_ChucVus_MaChucVu" FromRole="NhanViens" ToRole="ChucVus" />
+  </EntityType>
+  <EntityType Name="NhaXuatBan">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNXB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_dbo_Saches_dbo_NhaXuatBans_MaNXB" FromRole="NhaXuatBans" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaLoai" Type="Int32" Nullable="false" />
+    <Property Name="MaNXB" Type="Int32" Nullable="false" />
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoTrang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaBan" Type="Double" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgaySua" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LuotMua" Type="Int32" Nullable="false" />
+    <Property Name="File" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoSao" Type="Double" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BinhLuans" Relationship="Self.FK_dbo_BinhLuans_dbo_Saches_MaSach" FromRole="Saches" ToRole="BinhLuans" />
+    <NavigationProperty Name="ChiTietDonBans" Relationship="Self.FK_dbo_ChiTietDonBans_dbo_Saches_MaSach" FromRole="Saches" ToRole="ChiTietDonBans" />
+    <NavigationProperty Name="ChiTietDonNhaps" Relationship="Self.FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach" FromRole="Saches" ToRole="ChiTietDonNhaps" />
+    <NavigationProperty Name="LoaiSach" Relationship="Self.FK_dbo_Saches_dbo_LoaiSaches_MaLoai" FromRole="Saches" ToRole="LoaiSaches" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK_dbo_Saches_dbo_NhaCungCaps_MaNCC" FromRole="Saches" ToRole="NhaCungCaps" />
+    <NavigationProperty Name="NhaXuatBan" Relationship="Self.FK_dbo_Saches_dbo_NhaXuatBans_MaNXB" FromRole="Saches" ToRole="NhaXuatBans" />
+    <NavigationProperty Name="ThamGias" Relationship="Self.FK_dbo_ThamGias_dbo_Saches_MaSach" FromRole="Saches" ToRole="ThamGias" />
+  </EntityType>
+  <EntityType Name="TacGia">
+    <Key>
+      <PropertyRef Name="MaTacGia" />
+    </Key>
+    <Property Name="MaTacGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTacGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ThamGias" Relationship="Self.FK_dbo_ThamGias_dbo_TacGias_MaTacGia" FromRole="TacGias" ToRole="ThamGias" />
+  </EntityType>
+  <EntityType Name="ThamGia">
+    <Key>
+      <PropertyRef Name="MaSach" />
+      <PropertyRef Name="MaTacGia" />
+    </Key>
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="MaTacGia" Type="Int32" Nullable="false" />
+    <Property Name="VaiTro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_dbo_ThamGias_dbo_Saches_MaSach" FromRole="ThamGias" ToRole="Saches" />
+    <NavigationProperty Name="TacGia" Relationship="Self.FK_dbo_ThamGias_dbo_TacGias_MaTacGia" FromRole="ThamGias" ToRole="TacGias" />
+  </EntityType>
+  <Association Name="FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang">
+    <End Role="KhachHangs" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="BinhLuans" Type="Self.BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHangs">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="BinhLuans">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_BinhLuans_dbo_Saches_MaSach">
+    <End Role="Saches" Type="Self.Sach" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BinhLuans" Type="Self.BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saches">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="BinhLuans">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang">
+    <End Role="DonHangBans" Type="Self.DonHangBan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietDonBans" Type="Self.ChiTietDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHangBans">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="ChiTietDonBans">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChiTietDonBans_dbo_Saches_MaSach">
+    <End Role="Saches" Type="Self.Sach" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietDonBans" Type="Self.ChiTietDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saches">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietDonBans">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang">
+    <End Role="DonHangNhaps" Type="Self.DonHangNhap" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietDonNhaps" Type="Self.ChiTietDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHangNhaps">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="ChiTietDonNhaps">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach">
+    <End Role="Saches" Type="Self.Sach" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietDonNhaps" Type="Self.ChiTietDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saches">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietDonNhaps">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_NhanViens_dbo_ChucVus_MaChucVu">
+    <End Role="ChucVus" Type="Self.ChucVu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NhanViens" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVus">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="NhanViens">
+        <PropertyRef Name="MaChucVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang">
+    <End Role="KhachHangs" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="DonHangBans" Type="Self.DonHangBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHangs">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="DonHangBans">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Saches_dbo_LoaiSaches_MaLoai">
+    <End Role="LoaiSaches" Type="Self.LoaiSach" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSaches">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Saches_dbo_NhaCungCaps_MaNCC">
+    <End Role="NhaCungCaps" Type="Self.NhaCungCap" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCaps">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Saches_dbo_NhaXuatBans_MaNXB">
+    <End Role="NhaXuatBans" Type="Self.NhaXuatBan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaXuatBans">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ThamGias_dbo_Saches_MaSach">
+    <End Role="Saches" Type="Self.Sach" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ThamGias" Type="Self.ThamGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saches">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ThamGias">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ThamGias_dbo_TacGias_MaTacGia">
+    <End Role="TacGias" Type="Self.TacGia" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ThamGias" Type="Self.ThamGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TacGias">
+        <PropertyRef Name="MaTacGia" />
+      </Principal>
+      <Dependent Role="ThamGias">
+        <PropertyRef Name="MaTacGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebBanSachDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="BinhLuans" EntityType="Self.BinhLuan" />
+    <EntitySet Name="ChiTietDonBans" EntityType="Self.ChiTietDonBan" />
+    <EntitySet Name="ChiTietDonNhaps" EntityType="Self.ChiTietDonNhap" />
+    <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
+    <EntitySet Name="DonHangBans" EntityType="Self.DonHangBan" />
+    <EntitySet Name="DonHangNhaps" EntityType="Self.DonHangNhap" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="LoaiSaches" EntityType="Self.LoaiSach" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="NhaXuatBans" EntityType="Self.NhaXuatBan" />
+    <EntitySet Name="Saches" EntityType="Self.Sach" />
+    <EntitySet Name="TacGias" EntityType="Self.TacGia" />
+    <EntitySet Name="ThamGias" EntityType="Self.ThamGia" />
+    <AssociationSet Name="FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang" Association="Self.FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang">
+      <End Role="KhachHangs" EntitySet="KhachHangs" />
+      <End Role="BinhLuans" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_BinhLuans_dbo_Saches_MaSach" Association="Self.FK_dbo_BinhLuans_dbo_Saches_MaSach">
+      <End Role="Saches" EntitySet="Saches" />
+      <End Role="BinhLuans" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang" Association="Self.FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang">
+      <End Role="DonHangBans" EntitySet="DonHangBans" />
+      <End Role="ChiTietDonBans" EntitySet="ChiTietDonBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChiTietDonBans_dbo_Saches_MaSach" Association="Self.FK_dbo_ChiTietDonBans_dbo_Saches_MaSach">
+      <End Role="Saches" EntitySet="Saches" />
+      <End Role="ChiTietDonBans" EntitySet="ChiTietDonBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang" Association="Self.FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang">
+      <End Role="DonHangNhaps" EntitySet="DonHangNhaps" />
+      <End Role="ChiTietDonNhaps" EntitySet="ChiTietDonNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach" Association="Self.FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach">
+      <End Role="Saches" EntitySet="Saches" />
+      <End Role="ChiTietDonNhaps" EntitySet="ChiTietDonNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_NhanViens_dbo_ChucVus_MaChucVu" Association="Self.FK_dbo_NhanViens_dbo_ChucVus_MaChucVu">
+      <End Role="ChucVus" EntitySet="ChucVus" />
+      <End Role="NhanViens" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang" Association="Self.FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang">
+      <End Role="KhachHangs" EntitySet="KhachHangs" />
+      <End Role="DonHangBans" EntitySet="DonHangBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Saches_dbo_LoaiSaches_MaLoai" Association="Self.FK_dbo_Saches_dbo_LoaiSaches_MaLoai">
+      <End Role="LoaiSaches" EntitySet="LoaiSaches" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Saches_dbo_NhaCungCaps_MaNCC" Association="Self.FK_dbo_Saches_dbo_NhaCungCaps_MaNCC">
+      <End Role="NhaCungCaps" EntitySet="NhaCungCaps" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Saches_dbo_NhaXuatBans_MaNXB" Association="Self.FK_dbo_Saches_dbo_NhaXuatBans_MaNXB">
+      <End Role="NhaXuatBans" EntitySet="NhaXuatBans" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ThamGias_dbo_Saches_MaSach" Association="Self.FK_dbo_ThamGias_dbo_Saches_MaSach">
+      <End Role="Saches" EntitySet="Saches" />
+      <End Role="ThamGias" EntitySet="ThamGias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ThamGias_dbo_TacGias_MaTacGia" Association="Self.FK_dbo_ThamGias_dbo_TacGias_MaTacGia">
+      <End Role="TacGias" EntitySet="TacGias" />
+      <End Role="ThamGias" EntitySet="ThamGias" />
+    </AssociationSet>
+    <FunctionImport Name="GetDonHang" ReturnType="Collection(WebBanSachDBModel.GetDonHang_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetDonHang_Result">
+    <Property Type="Int32" Name="MaDonHang" Nullable="false" />
+    <Property Type="Int32" Name="MaSach" Nullable="false" />
+    <Property Type="Int32" Name="SoLuong" Nullable="false" />
+    <Property Type="Double" Name="DonGia" Nullable="false" />
+    <Property Type="String" Name="MaKhachHang" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="HoTenKH" Nullable="true" />
+    <Property Type="String" Name="DiaChiKH" Nullable="true" />
+    <Property Type="String" Name="SdtKH" Nullable="true" />
+    <Property Type="DateTime" Name="NgayBan" Nullable="false" Precision="23" />
+    <Property Type="Double" Name="TongTien" Nullable="false" />
+    <Property Type="String" Name="TenSach" Nullable="false" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="Int32" Name="Expr2" Nullable="false" />
+  </ComplexType>
+</Schema>

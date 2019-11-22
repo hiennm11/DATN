@@ -1,0 +1,94 @@
+﻿@model WebBanSach.Models.KhachHang
+
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <title>Đăng ký - Web bán sách</title>
+    @Styles.Render("~/Content/indexcss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div id="page" class="wrap-main" style="padding-top: 0px;">
+            <div class="main-container">
+                <div class="wrap-site account account__page bg-acc">
+                    <div class="main-content">
+                        <div class="container">
+                            <div class="box-login">
+                                <div class="account__wrap">
+                                    <div class="account__logo text-center">
+                                        @*<img src="https://ebook.vn//images/logo.png" alt="Logo">*@
+                                    </div>
+                                    <div class="account__form">
+                                        <h1 class="color-dark font-size-24 font-weight-medium text-uppercase text-center">ĐĂNG KÝ</h1>
+                                        <form id="w0" action="/register" method="post" enctype="multipart/form-data">
+                                            <div class="form-group field-user-fullname">
+
+                                                @Html.EditorFor(model => model.MaKhachHang, new { htmlAttributes = new { @class = "form-control", placeholder = "Tên tài khoản" } })
+                                                @Html.ValidationMessageFor(model => model.MaKhachHang, "", new { @class = "text-danger" })
+                                                <p class="text-danger">@ViewBag.Alert</p>
+                                            </div>
+                                            <div class="form-group field-user-fullname">
+
+                                                @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control", placeholder = "Họ và tên" } })
+                                                @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group field-user-email">
+
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control", placeholder = "Địa chỉ" } })
+                                                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group field-user-phone">
+
+                                                @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control", placeholder = "Số điện thoại" } })
+                                                @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group field-user-password">
+
+                                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Mật khẩu", type = "password" } })
+                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                            </div>
+
+                                            @*<div class="form-group">
+                                                    <input type="password" name="rpassword" value="" id="rpassword" placeholder="Nhập lại mật khẩu" class="form-control font-italic">
+                                                </div>*@
+
+                                            <div class="form-action display-flex-center content-space-between table-xs">
+                                                <button type="submit" class="btn btn-100 btn-secondary font_secondary text-uppercase">
+                                                    Đăng Ký <img src="https://ebook.vn//images/icon-right.png" alt="Signup">
+                                                </button>
+                                            </div>
+                                            <div class="account__login full-xs text-center txt-m-10">
+                                                Bạn đã có tài khoản? <a href="@Url.Action("Login")">Đăng nhập</a>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- box wrap site -->
+            </div>
+        </div>
+    }
+</body>
+</html>

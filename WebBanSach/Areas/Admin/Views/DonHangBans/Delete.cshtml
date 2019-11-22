@@ -1,0 +1,81 @@
+﻿@model WebBanSach.Models.DonHangBan
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DonHangBan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChiKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChiKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SdtKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SdtKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

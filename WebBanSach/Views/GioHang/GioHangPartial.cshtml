@@ -1,0 +1,46 @@
+﻿@using WebBanSach.Models
+@model List<GioHang>
+
+<table class="adr-oms table table_order_items">
+    <tbody id="orderItem">
+    @foreach (var item in Model)
+    {
+        <tr class="js-cart-item">
+            <th>
+                @if (item.HinhAnh == null)
+                {
+                    <img height="100" width="90" style="border: solid 0.2px" />
+                }
+                else
+                {
+                    <img src=@item.HinhAnh height="100" width="90" style="border: solid 0.2px" />
+                }            
+            </th>
+            <th>
+                <div class="table_order_items-cell-title">
+                    <div class="table_order_items_product_name">
+                        <span class="title">
+                            <a target="_blank" href="/vitamin-tong-hop-cho-ba-bau-nature-made-prenatal-multi-dha-hop-150-vien" title="@item.TenSP"> @item.TenSP </a>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </th>
+
+            <th style="text-align: center">
+                <div class="tt-price js-price">@item.DonGia</div>
+
+                <div class="quantity">
+                    <span style="float: left; width: 10%">x</span>
+                    <input style="width: 80%" type="number" min="1" class="form-control text-center sl-so-luong js-quantity" value="@item.SoLuong" data-select="1">
+                </div>
+                <div class="tt-price"> <span class="js-subtotal">@item.TongTien</span> </div>
+                <div class="tt-price"> <a title="Xóa sản phẩm" class="btn-delete js-remove-item-from-cart" href="javascript:;"></a> </div>
+            </th>
+        </tr>
+    }
+    
+    </tbody>
+</table>

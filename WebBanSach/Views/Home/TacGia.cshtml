@@ -1,0 +1,7 @@
+﻿@model IEnumerable<WebBanSach.Models.ThamGia>
+
+
+@foreach (var item in Model)
+{
+    <a href="@Url.Action("Index",new{@tacgia = item.MaTacGia})">@Html.DisplayFor(modelItem => item.TacGia.TenTacGia)   </a>
+}

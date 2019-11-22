@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebBanSach.Models.ThamGia>
+
+<div class="item__wrap">
+    <h3 class="item__title">Tác giả tiêu biểu</h3>
+    <div class="item__content">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="@Url.Action("Index",new {@tacgia = item.MaTacGia})">@Html.DisplayFor(n => item.TacGia.TenTacGia)</a></li>
+            }            
+        </ul>
+    </div>
+</div>

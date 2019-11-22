@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebBanSach.Models.ThamGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Danh mục</a>
+    </li>
+    <li class="breadcrumb-item active">Thêm tác giả vào sách</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Quản Lí Tác giả
+    </div>
+   
+    <div class="card-body">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="/Admin/ThamGias/Create" class="btn btn-info" role="button">Thêm sách</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sach.TenSach)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TacGia.TenTacGia)
+                        </th>
+                       
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sach.TenSach)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TacGia.TenTacGia)
+                        </th>
+                      
+                        <th>Chức năng</th>
+                    </tr>
+                </tfoot>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sach.TenSach)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
+                        </td>
+                       
+                        <td>
+                            @Html.ActionLink("Sửa", "Edit", new {/* id=item.PrimaryKey */}) |
+                            @Html.ActionLink("Chi tiết", "Details", new {/* id=item.PrimaryKey */}) |
+                            @Html.ActionLink("Xóa", "Delete", new {/* id=item.PrimaryKey */})
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+<p class="small text-center text-muted my-5">
+    <em>More table examples coming soon...</em>
+</p>
+
+
+
+
+
+
+

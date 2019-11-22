@@ -1,0 +1,44 @@
+﻿@model WebBanSach.Models.TacGia
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa tác giả</h2>
+
+<h3>Bạn có chắc chắn muốn xóa không?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTacGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+        </br>
+    </dl>
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+            @Html.ActionLink("Quay lại", "Index", "TacGias", null, new { @class = "btn btn-danger" })
+            <input type="submit" value="Xóa" class="btn btn-success" />
+        </div>
+      
+    }
+</div>

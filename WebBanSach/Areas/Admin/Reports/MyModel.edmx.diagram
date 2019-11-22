@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a7c9c31057fe48c18e6f421228f4ee6e" Name="Diagram1" ZoomLevel="128">
+        <EntityTypeShape EntityType="WebBanSachDBModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.BinhLuan" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.ChiTietDonBan" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.ChiTietDonNhap" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.ChucVu" Width="1.5" PointX="10.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.DonHangBan" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.DonHangNhap" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.KhachHang" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.LoaiSach" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.NhanVien" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.NhaXuatBan" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.Sach" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.TacGia" Width="1.5" PointX="8.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebBanSachDBModel.ThamGia" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_BinhLuans_dbo_KhachHangs_MaKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_BinhLuans_dbo_Saches_MaSach" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ChiTietDonBans_dbo_DonHangBans_MaDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ChiTietDonBans_dbo_Saches_MaSach" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ChiTietDonNhaps_dbo_DonHangNhaps_MaDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ChiTietDonNhaps_dbo_Saches_MaSach" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_NhanViens_dbo_ChucVus_MaChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_DonHangBans_dbo_KhachHangs_MaKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_Saches_dbo_LoaiSaches_MaLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_Saches_dbo_NhaCungCaps_MaNCC" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_Saches_dbo_NhaXuatBans_MaNXB" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ThamGias_dbo_Saches_MaSach" ManuallyRouted="false" />
+        <AssociationConnector Association="WebBanSachDBModel.FK_dbo_ThamGias_dbo_TacGias_MaTacGia" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

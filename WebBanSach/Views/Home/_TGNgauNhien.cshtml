@@ -1,0 +1,31 @@
+﻿@model WebBanSach.Models.TacGia
+
+<div class="author">
+    <div class="author__head">
+        <div class="author__avatar pull-left">
+            <img src="https://ebook.vn/images/default.jpg" class="img-circle" alt="@Model.TenTacGia">
+        </div>
+        <div class="author__intro display-table">
+            <h3 class="author__name font-size-20 font-weight-bold"><a href="@Url.Action("Index",new{@tacgia = Model.MaTacGia})">@Model.TenTacGia</a></h3>
+            <p>Số cuốn sách: @ViewBag.SoSachTG</p>
+            <span class="rating-box pointer">
+                <i class="star-item fa fa-star"></i>
+                <i class="star-item fa fa-star"></i>
+                <i class="star-item fa fa-star"></i>
+                <i class="star-item fa fa-star"></i>
+                <i class="star-item fa fa-star"></i>
+                <span style="width:100%">
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class="author__product">
+        <h2 class="font-size-20 font-weight-medium">Sách nổi bật</h2>
+        @Html.Action("SachTGNgauNhien",new {@tg = Model.MaTacGia})
+    </div>
+</div>

@@ -1,0 +1,100 @@
+﻿@using WebBanSach.Models
+@model IEnumerable<WebBanSach.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/Admin">Tổng quan</a>
+    </li>
+    <li class="breadcrumb-item active">Quản lí tài khoản</li>
+</ol>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Bảng Quản Lí Tài Khoản
+    </div>
+
+    <div class="card-body">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="/Admin/NhanViens/Create" class="btn btn-info" role="button">Thêm tài khoản</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Họ tên
+                        </th>
+                        <th>
+                            Chức vụ
+                        </th>
+
+
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Địa chỉ
+                        </th>
+                        <th>
+                            Số điện thoại
+                        </th>
+                        <th>
+                            Trạng thái
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoTen)
+                           
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ChucVuNhanVien.TenChucVu)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SDT)
+                        </td>
+                        <td>
+                            @if (item.TrangThai == true)
+                            {
+                                string trangthai = "Đang làm việc";
+                                @Html.DisplayFor(modelItem => trangthai)
+                            }
+                            else
+                            {
+                                string trangthai = "Nghỉ việc";
+                                @Html.DisplayFor(modelItem => trangthai)
+                            }
+                        </td>
+                        <td>
+                            <a href="/Admin/NhanViens/Edit/@item.MaNV"><i class="fas fa-fw fa-pencil-alt"></i></a>
+                            <a href="/Admin/NhanViens/Delete/@item.MaNV"><i class="fas fa-fw fa-trash-alt"style="color: red"></i></a>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Cập nhật ngày @DateTime.Now</div>
+</div>
+

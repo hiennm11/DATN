@@ -1,0 +1,240 @@
+﻿@using WebBanSach.Models
+@{
+    var User = (UserLogin)Session["TaiKhoan"];
+    int? SoLuong = @ViewBag.TongSL;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">*@
+    @*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">*@
+    
+    <title>@ViewBag.Title - Web bán sách</title>
+    
+    @Styles.Render("~/Content/indexcss")
+    @Scripts.Render("~/bundles/indexjs")
+    
+
+
+</head>
+<body>
+
+<div class="ebook-head-main background_primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flex-line">
+                    <div class="logo col-logo">
+                        <a href="/Home/Index">
+                            <!-- <img src="https://ebook.vn/images/logo-white.png" alt="EBOOK – Thư viện sách điện tử – Sách Hay Giúp Thay Đổi Cuộc Đời"> -->
+                            <h3 style="color: white">Trang Chủ</h3>
+                        </a>
+                    </div>
+                    <div class="col-nav ebook-nav-home">
+                        @Html.Action("LoaiSachP", "Home")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ebook__search text-center display-flex-center">
+                    <div class="full-width">
+
+                        <form action="@Url.Action("Index")" method="get" class="full-width" data-otf-ajax="true" data-otf-target="#bookList">
+                            <input type="text" name="search_key" placeholder="Tìm sách bạn mong muốn...?" value="" class="font-italic color-b9 form-control font-size-12">
+                            <button type="submit" class="color-b9 font-size-18"><i class="fa fa-search"></i></button>
+                        </form>
+
+                    </div>
+                    @*<form action="/search" method="get" class="full-width">
+                            <input type="s" name="search_key" placeholder="Tìm sách bạn mong muốn...?" value="" class="font-italic color-b9 form-control font-size-12">
+                            <button type="submit" class="color-b9 font-size-18"><i class="fa fa-search"></i></button>
+                        </form>*@
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Action("GHPartial", "GioHang")
+                <div class="header__account ebook_account pull-right">
+                    @if (Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+                    {
+                        <a href="@Url.Action("Register","Home")" class="btn-sign">Đăng ký</a>
+                        <a href="@Url.Action("Login","Home")" class="btn-login">Đăng nhập</a>
+                    }
+                    else
+                    {
+                            @*<div class="ebook__upload">
+                            @Html.ActionLink("Đăng xuất","LogOut")
+                            </div>*@
+                        <div class="header__account ebook_account pull-right">
+
+                            <div class="icon-user dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="e-coin">
+                                    <span>Chào @User.HoTen !</span>
+                                    <small></small>
+                                </div>
+                                <a href="javascript:void (0)" class="ebook-user">
+                                    <span class="img-user">
+                                        <img src="https://ebook.vn/images/default.jpg" title="@User.HoTen" alt="@User.HoTen">
+                                    </span>
+                                    <span class="fa fa-caret-down"></span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menu hidden-xs pull-right">
+                                <li class="nav-link">
+                                    <a href="@Url.Action("ThongTin","User", new {@id = User.Username})"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin cá nhân</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="@Url.Action("ThongTinDonHang","User",new {@id = User.Username})"><i class="fa fa-user" aria-hidden="true"></i> Đơn hàng của tôi</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("LogOut","Home")" class="btnDangxuat"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ebook-head-main background_primary navbar navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flex-line">
+                    <div class="nav nav-brand">
+                        <a href="/">
+                            <!-- <img src="https://ebook.vn/images/logo-white.png" alt="EBOOK – Thư viện sách điện tử – Sách Hay Giúp Thay Đổi Cuộc Đời"> -->
+                            <h3 style="color: white">Trang Chủ</h3>
+                        </a>
+                    </div>
+                    <div class="col-nav ebook-nav-home">
+                        @Html.Action("LoaiSachP", "Home")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ebook__search text-center display-flex-center">
+                    <div class="full-width">
+
+                        <form id="search_form" action="@Url.Action("Index")" method="get" class="full-width" data-otf-target="#bookList">
+                            <input type="text" name="search_key" placeholder="Tìm sách bạn mong muốn...?" value="" class="font-italic color-b9 form-control font-size-12">
+                            <button type="submit" class="color-b9 font-size-18"><i class="fa fa-search"></i></button>
+                        </form>
+
+                    </div>
+                    @*<form action="/search" method="get" class="full-width">
+                                    <input type="s" name="search_key" placeholder="Tìm sách bạn mong muốn...?" value="" class="font-italic color-b9 form-control font-size-12">
+                                    <button type="submit" class="color-b9 font-size-18"><i class="fa fa-search"></i></button>
+                                </form>*@
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- <a href="javascript:void (0)" onclick="showNotification('alert-success', 'Vui lòng đăng nhập để có thể thêm sách!')" class="ebook__upload"><i class="fas fa-upload"></i> Upload</a> -->
+                @Html.Action("GHPartial", "GioHang")
+                <div class="header__account ebook_account pull-right">
+                    @if (Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+                    {
+                        <a href="@Url.Action("Register","Home")" class="btn-sign">Đăng ký</a>
+                        <a href="@Url.Action("Login","Home")" class="btn-login">Đăng nhập</a>
+                    }
+                    else
+                    {
+                                @*<div class="ebook__upload">
+                                    @Html.ActionLink("Đăng xuất","LogOut")
+                                    </div>*@
+                        <div class="header__account ebook_account pull-right">
+
+                            <div class="icon-user dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="e-coin">
+                                    <span>Chào @User.HoTen !</span>
+                                    <small></small>
+                                </div>
+                                <a href="javascript:void (0)" class="ebook-user">
+                                    <span class="img-user">
+                                        <img src="https://ebook.vn/images/default.jpg" title="@User.HoTen" alt="@User.HoTen">
+                                    </span>
+                                    <span class="fa fa-caret-down"></span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menu hidden-xs pull-right">
+                                <li class="nav-link">
+                                    <a href="@Url.Action("ThongTin","User", new {@id = User.Username})"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin cá nhân</a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="@Url.Action("ThongTinDonHang","User",new {@id = User.Username})"><i class="fa fa-user" aria-hidden="true"></i> Đơn hàng của tôi</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("LogOut","Home")" class="btnDangxuat"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+            
+</div>
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-main__col">
+                <div class="footer-col__content">
+                    <div class="footer-col__description font-weight-bold text-uppercase">
+                        Web bán sách
+                    </div>
+                    <div class="footer-col__address">
+                        Địa chỉ: 65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1, Tp.HCM.
+                    </div>
+                    <div class="footer-col__hotline">
+                        Hotline: 0123456789.
+                    </div>
+                    <div class="footer-col__address">
+                        Email: webbansach@abc.xyz.
+                    </div>
+                </div>
+
+                <div class="footer-copyright text-center"> <p>&copy; @DateTime.Now.Year - Web bán sách</p></div>
+            </div>
+        </div>
+    </div>
+</footer>
+   
+@*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+@RenderSection("scripts", required: false)
+<script src="~/Scripts/js/js.js"></script>
+<script type="text/javascript">
+    function myCallback(data) {
+        if (!data.Success) {
+            alert(data.ErrorMessage);
+        } else {
+            showNotification('alert-success', "Thêm sản phẩm vào giỏ hàng thành công!");
+            setTimeout(function() {
+                $(document.body).load(location.reload());
+            },1000);           
+        }
+    }
+</script>
+@if (TempData["message"] != null)
+{
+    <script type="text/javascript">
+        alert(@Html.Raw(Json.Encode(TempData["message"])));
+    </script>
+}
+
+</body>
+</html>

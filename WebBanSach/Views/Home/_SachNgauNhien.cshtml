@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebBanSach.Models.Sach>
+
+<div class="book-feature">
+    @foreach (var item in Model)
+    {
+        <div class="book-feature__item">
+            <div class="item-img pull-left">
+                <a href="@Url.RouteUrl("Details",new{@id = item.TenSachKD})" class="view-book">
+                    <img src="@item.Hinh" alt="@item.TenSach">
+                </a>
+            </div>
+            <div class="item-content display-table">
+                <h3 class="book-feature__name font_secondary font-size-14 font-weight-normal">
+                    <a href="@Url.RouteUrl("Details",new{@id = item.TenSachKD})" class="view-book">@item.TenSach</a>
+                </h3>
+                <span class="rating-box pointer">
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <i class="star-item fa fa-star"></i>
+                    <span style="width:@(item.SoSao * 20)%">
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                    </span>
+                </span>
+                <div class="book-feature__price book__price">
+                    @if (item.SoLuong > 0)
+                    {
+                        <span class="price">@String.Format("{0:0,0}", item.GiaBan)đ </span>
+                    }
+                    else
+                    {
+                        <span class="price text-danger">Hết hàng</span>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+    
+
+</div>

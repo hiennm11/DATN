@@ -1,0 +1,87 @@
+﻿@model WebBanSach.Models.KhachHang
+@{
+    ViewBag.Title = "Thông tin ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-content">
+    <section id="breadcrumb-page" class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="/">Trang chủ</a>
+                    </li>
+                    <li class="active">Thông tin cá nhân</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page-content page-category">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-5 full-xs sidebar hidden-xs">
+                    <div class="sidebar__wrap">
+                        <div class="sidebar__item sidebar__book-type">
+                            <div class="sidebar__content">
+                                <div class="img-user text-center">
+                                    <img src="https://ebook.vn/images/default.jpg" alt="Minh Hiền">
+                                </div>
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("ThongTin",new{@id = Model.MaKhachHang})">Profile</a>
+                                </div>
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("DoiMatKhau",new{@id = Model.MaKhachHang})">Đổi mật khẩu</a>
+                                </div>                               
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("ThongTinDonHang",new{@id = Model.MaKhachHang})">Đơn hàng của tôi</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8 col-xs-7 full-xs">
+                    <div class="book-list display-table-full">
+                        <div class="row">
+                            <a href="@Url.Action("Update", new {@id = Model.MaKhachHang})"><i class="fa fa-edit"></i> Chỉnh sửa</a>
+                            <table class="table table-responsive table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>@Html.DisplayNameFor(model => model.HoTen)</th>
+                                        <td>@Html.DisplayFor(model => model.HoTen)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>@Html.DisplayNameFor(model => model.Email)</th>
+                                        <td>@Html.DisplayFor(model => model.Email)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>@Html.DisplayNameFor(model => model.SDT)</th>
+                                        <td>@Html.DisplayFor(model => model.SDT)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>@Html.DisplayNameFor(model => model.DiaChi)</th>
+                                        <td>@Html.DisplayFor(model => model.DiaChi)</td>
+                                    </tr>
+                                    
+                                    @*<tr>
+                                        <th>Facebook ID</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mã google pixel</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mã facebook pixel</th>
+                                        <td></td>
+                                    </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

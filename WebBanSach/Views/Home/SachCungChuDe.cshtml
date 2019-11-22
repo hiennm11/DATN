@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebBanSach.Models.Sach>
+
+@foreach (var item in Model)
+{
+    <div class="book-list__item swiper-slide" data-swiper-slide-index="2" style="width: 165px; margin-right: 30px;">
+        <a href="@Url.Action("Details",new{item.MaSach})" class="view-book"  >
+        </a><div class="item__wrap">
+            <a href="@Url.Action("Details",new{@id = item.TenSachKD})" class="view-book"  >
+            </a><div class="item__head">
+                <a href="@Url.Action("Details",new{@id = item.TenSachKD})" class="view-book"  >
+                    <div class="item__img">
+                        <img src="@item.Hinh" alt="@item.TenSach">
+                    </div>
+                </a><div class="item__action">
+                    <a href="@Url.Action("Details",new{@id = item.TenSachKD})" class="view-book"  >
+                    </a><div class="item__buy">
+                        <a href="" class="view-book"  >
+                        </a>
+                        @Ajax.ActionLink("Mua sách giấy", "ThemSPVaoGioHang", new {controller = "GioHang", @maSach = item.MaSach},
+                                new AjaxOptions
+                                {
+                                    HttpMethod = "post",
+                                    OnSuccess = "myCallback"
+
+                                })
+                    </div>
+                </div>
+            </div>
+            <div class="item__body">
+                <h3 class="item__title">
+                    @if (item.TenSach.Length > 35)
+                    {
+                        <a href="@Url.Action("Details", new {@id = item.TenSachKD})" class="view-book">@item.TenSach.Substring(0,35) ...</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Details", new {@id = item.TenSachKD})" class="view-book">@item.TenSach</a>
+                    }
+                </h3>
+                <div class="item__rate">
+
+                    <span class="rating-box pointer">
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <i class="star-item fa fa-star"></i>
+                        <span style="width:@(item.SoSao * 20)%">
+                            <i class="star-item fa fa-star"></i>
+                            <i class="star-item fa fa-star"></i>
+                            <i class="star-item fa fa-star"></i>
+                            <i class="star-item fa fa-star"></i>
+                            <i class="star-item fa fa-star"></i>
+                        </span>
+                    </span>
+
+                </div>
+                <div class="item__price book__price">
+                    @if (item.SoLuong > 0)
+                    {
+                        <span class="price">@String.Format("{0:0,0}", item.GiaBan)đ </span>
+                    }
+                    else
+                    {
+                        <span class="price text-danger">Hết hàng</span>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+

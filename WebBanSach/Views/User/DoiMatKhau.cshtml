@@ -1,0 +1,118 @@
+﻿@model WebBanSach.Models.KhachHang
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-content">
+    <section id="breadcrumb-page" class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="/">Trang chủ</a>
+                    </li>
+                    <li>Thông tin cá nhân</li>
+                    <li class="active">Đổi mật khẩu</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page-content page-category">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-5 full-xs sidebar hidden-xs">
+                    <div class="sidebar__wrap">
+                        <div class="sidebar__item sidebar__book-type">
+                            <div class="sidebar__content">
+                                <div class="img-user text-center">
+                                    <img src="https://ebook.vn/images/default.jpg" alt="@Model.HoTen">
+                                    <div class="label-avatar">
+                                        <label for="avatar-url">
+                                            <i class="fa fa-camera fa-2x" aria-hidden="true"></i> Thay ảnh đại diện
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("ThongTin",new{@id = Model.MaKhachHang})">Profile</a>
+                                </div>
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("DoiMatKhau",new{@id = Model.MaKhachHang})">Đổi mật khẩu</a>
+                                </div>
+                                <div class="sidebar__book-title color-dark">
+                                    <a href="@Url.Action("ThongTinDonHang",new{@id = Model.MaKhachHang})">Đơn hàng của tôi</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8 col-xs-7 full-xs">
+                    <div class="book-list display-table-full">
+                        <div class="row">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-group field-user-fullname">
+                                    <label class="control-label" for="user-fullname">Mật khẩu cũ</label>
+                                    <input type="password" class = "form-control" name="txtMatKhauCu"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="user-fullname">Mật khẩu mới</label>
+                                    <input type="password" class="form-control" name="txtMatKhauMoi" />
+                                </div>
+                                <div class="form-group field-user-phone">
+                                    <label class="control-label" for="user-fullname">Nhập lại mật khẩu mới</label>
+                                    <input type="password" class="form-control" name="txtNhapLaiMK" />
+                                </div>
+                                <div class="form-group">
+                                    <p class="text-danger">@ViewBag.Alert</p>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                                </div>
+
+
+                            }
+                            @*<form id="w0" action="/user/update" method="post" enctype="multipart/form-data">
+                                    <input type="file" name="User[avatar_url]" id="avatar-url">
+                                    <div class="form-group field-user-fullname">
+                                        <label class="control-label" for="user-fullname">Họ và tên</label>
+                                        <input type="text" id="user-fullname" class="form-control" name="User[fullname]" value="Minh Hiền" placeholder="Họ và tên">
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input value="minhhiena712@gmail.com" class="form-control" disabled="">
+                                    </div>
+                                    <div class="form-group field-user-phone">
+                                        <label class="control-label" for="user-phone">Số điện thoại</label>
+                                        <input type="text" id="user-phone" class="form-control" name="User[phone]" value="134567344" placeholder="Số điện thoại">
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Giới tính</label>
+                                        <select name="User[gender]" class="form-control">
+                                            <option value="0">Nam</option>
+                                            <option value="1">Nữ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group field-user-birthday_date required">
+                                        <label class="control-label" for="user-birthday">Ngày sinh</label>
+                                        <div id="w1-kvdate" class="input-group date"><span class="input-group-addon kv-date-calendar" title="Select date"><i class="glyphicon glyphicon-calendar"></i></span><span class="input-group-addon kv-date-remove" title="Clear field"><i class="glyphicon glyphicon-remove"></i></span><input type="text" id="w1" class="krajee-datepicker form-control" name="User[birthday]" value="" placeholder="Ngày sinh" data-datepicker-source="w1-kvdate" data-datepicker-type="2" data-krajee-kvdatepicker="kvDatepicker_808f1bf4"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                    </div>
+
+                                </form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

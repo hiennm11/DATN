@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebBanSach.Models.LoaiSach>
+<div class="stick-nav-home">
+    <button type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <span>Danh mục</span>
+</div>
+<div class="drop-menu">
+    <div class="ebook-main-menu">
+        <div class="list">
+            <ul>
+                @foreach(var item in Model)
+                {
+
+                    <li>                                              
+                        @*@Ajax.ActionLink(item.TenLoai,"Index",new {@danhmuc = item.MaLoai}, 
+                            new AjaxOptions
+                        {
+                            HttpMethod = "get",
+                            InsertionMode = InsertionMode.ReplaceWith,
+                            UpdateTargetId = "bookList",
+                            
+                        })*@
+                        
+                        <a type="submit" href="/?danhmuc=@item.MaLoai" data-otf-ajax="true" data-otf-target="#bookList">
+                                @item.TenLoai
+                                
+                                <div class="clear"></div>
+                            </a>                                              
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

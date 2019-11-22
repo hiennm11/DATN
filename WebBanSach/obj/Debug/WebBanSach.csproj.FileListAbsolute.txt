@@ -1,0 +1,276 @@
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\WebBanSach.dll.config
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\WebBanSach.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\WebBanSach.pdb
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csc.exe
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csc.exe.config
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csc.rsp
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csi.exe
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csi.exe.config
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\csi.rsp
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.AppContext.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Console.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.IO.Compression.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.IO.Pipes.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Claims.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.ValueTuple.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XPath.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\vbc.exe
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\vbc.exe.config
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\vbc.rsp
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\VBCSCompiler.exe
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Antlr3.Runtime.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\EntityFramework.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\EntityFramework.SqlServer.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Newtonsoft.Json.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\PagedList.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\PagedList.Mvc.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Helpers.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Mvc.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Optimization.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Razor.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.Deployment.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.Razor.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\WebGrease.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.SqlServer.Types.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\EntityFramework.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\EntityFramework.SqlServer.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\PagedList.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\PagedList.Mvc.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Helpers.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Mvc.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Optimization.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.Razor.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.Deployment.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Web.WebPages.Razor.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Newtonsoft.Json.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Antlr3.Runtime.pdb
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csprojAssemblyReference.cache
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\RdlCompile.cache
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\RdlCompile.compiled
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csproj.CoreCompileInputs.cache
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csproj.CopyComplete
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\WebBanSach.dll
+C:\Users\nguye\OneDrive\Máy tính\New folder (4)\WebBanSach\obj\Debug\WebBanSach.pdb
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\WebBanSach.dll.config
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\WebBanSach.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\WebBanSach.pdb
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csc.exe
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csc.exe.config
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csc.rsp
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csi.exe
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csi.exe.config
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\csi.rsp
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.AppContext.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Collections.Immutable.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Console.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.IO.Compression.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.IO.FileSystem.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.IO.Pipes.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Reflection.Metadata.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.AccessControl.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Claims.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.ValueTuple.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XPath.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\vbc.exe
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\vbc.exe.config
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\vbc.rsp
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\VBCSCompiler.exe
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\roslyn\VBCSCompiler.exe.config
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Antlr3.Runtime.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\EntityFramework.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\EntityFramework.SqlServer.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.Web.Infrastructure.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Newtonsoft.Json.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\PagedList.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\PagedList.Mvc.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Helpers.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Mvc.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Optimization.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Razor.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.Deployment.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.Razor.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\WebGrease.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.ReportViewer.Common.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.SqlServer.Types.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\EntityFramework.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\EntityFramework.SqlServer.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\PagedList.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\PagedList.Mvc.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Helpers.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Mvc.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Optimization.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.Razor.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.Deployment.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Web.WebPages.Razor.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Newtonsoft.Json.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Antlr3.Runtime.pdb
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Files\DoAnTN\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csprojAssemblyReference.cache
+D:\Files\DoAnTN\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csproj.CoreCompileInputs.cache
+D:\Files\DoAnTN\New folder (4)\WebBanSach\obj\Debug\WebBanSach.csproj.CopyComplete
+D:\Files\DoAnTN\New folder (4)\WebBanSach\obj\Debug\WebBanSach.dll
+D:\Files\DoAnTN\New folder (4)\WebBanSach\obj\Debug\WebBanSach.pdb
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\WebBanSach.dll.config
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\WebBanSach.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\WebBanSach.pdb
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csc.exe
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csc.exe.config
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csc.rsp
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csi.exe
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csi.exe.config
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\csi.rsp
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.AppContext.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Console.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.IO.Compression.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Claims.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.ValueTuple.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\vbc.exe
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\vbc.exe.config
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\vbc.rsp
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\VBCSCompiler.exe
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Antlr3.Runtime.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\EntityFramework.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\EntityFramework.SqlServer.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Newtonsoft.Json.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\PagedList.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\PagedList.Mvc.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Helpers.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Mvc.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Optimization.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Razor.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.Razor.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\WebGrease.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\EntityFramework.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\EntityFramework.SqlServer.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\PagedList.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\PagedList.Mvc.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Helpers.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Mvc.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Optimization.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.Razor.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Web.WebPages.Razor.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Newtonsoft.Json.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Antlr3.Runtime.pdb
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\obj\Debug\WebBanSach.csprojAssemblyReference.cache
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\obj\Debug\WebBanSach.csproj.CoreCompileInputs.cache
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\obj\Debug\WebBanSach.csproj.CopyComplete
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\obj\Debug\WebBanSach.dll
+C:\Users\Minh Hien\Desktop\abc\New folder\WebBanSach\obj\Debug\WebBanSach.pdb

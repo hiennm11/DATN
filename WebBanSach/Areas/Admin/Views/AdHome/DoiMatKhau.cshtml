@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "DoiMatKhau";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DoiMatKhau</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group field-user-fullname">
+        <label class="control-label" for="user-fullname">Mật khẩu cũ</label>
+        <input type="password" class = "form-control" name="txtMatKhauCu"/>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="user-fullname">Mật khẩu mới</label>
+        <input type="password" class="form-control" name="txtMatKhauMoi" />
+    </div>
+    <div class="form-group field-user-phone">
+        <label class="control-label" for="user-fullname">Nhập lại mật khẩu mới</label>
+        <input type="password" class="form-control" name="txtNhapLaiMK" />
+    </div>
+    <div class="form-group">
+        <p class="text-danger">@ViewBag.Alert</p>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+    </div>
+
+
+}

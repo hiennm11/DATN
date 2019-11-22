@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebBanSach.Models.Sach>
+
+<div class="author__product-list">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("Details",new{@id = item.TenSachKD})" title="@item.TenSach" class="item">
+            <img src="@item.Hinh" alt="@item.TenSach">
+        </a>
+    }
+    
+
+</div>
